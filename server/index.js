@@ -50,7 +50,7 @@ user.save((err,userData)=>{
 })
 
 app.get('/',(req,res)=> {
-res.send("Hello MAn");
+res.json("Hello MAn");
 });
 
 
