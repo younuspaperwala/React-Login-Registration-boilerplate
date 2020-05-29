@@ -12,7 +12,7 @@ useUnifiedTopology:true,
 useNewUrlParser:true
 
 }).then(()=> {
-    console.log("Db connected")
+    console.log("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Db connected XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 }).catch((err)=>{
     console.log(err)
 });
@@ -57,10 +57,11 @@ res.json("Hello MAn");
 
 app.post('/api/users/login',(req,res)=> {
     //find email in db
-
     User.findOne({email:req.body.email},(err,user)=> {
         if(!user)
         {
+            console.log(req.body)
+
             //if email not found
             return res.json({
                 LoginSuccess:false,
